@@ -1,0 +1,15 @@
+{
+  "best_val": 0.25275111465882033,
+  "epochs_ran": 20,
+  "Tc": 64,
+  "horizons": [
+    1,
+    5,
+    10
+  ],
+  "batch": 8,
+  "lr": 0.0003,
+  "early_stop": 15,
+  "weight_decay": 0.0005,
+  "dropout": 0.2
+}
