@@ -39,6 +39,7 @@ NT            ?= 16         # ky/binormal points in ky_flux (try 16; if 15, over
 N_TIME        ?= 0
 DKY           ?= 0.067
 K0            ?= 0.0
+T_INIT        ?=200   #trim transient initial time 
 
 # ---------- Binary formats ----------
 FORCE_RAW     ?= 0          # φ file: raw=0, Fortran-unformatted=1
@@ -86,6 +87,7 @@ phi:
 	python $(PARSE_PHI) \
 		--bin $(PHI_BIN) \
 		--Nr $(NR) --Ntheta $(NTHETA) --Ntor $(NTOR) \
+		--t_init $(T_INIT)\
 		--force_raw $(FORCE_RAW) --force_fortran $(FORCE_FORTRAN) \
 		--stride_t $(STRIDE_T) \
 		--ds_r $(DS_R) --ds_theta $(DS_THETA) --ds_tor $(DS_TOR) \
@@ -109,6 +111,7 @@ flux: phi ky
 	python $(MERGE_PY) \
 		--phi_npz $(PHI_NPZ) \
 		--ky_npz  $(KY_NPZ) \
+		--t_init  $(T_INIT) \
 		--out     $(PHI_FLUX_NPZ)
 
 ## 4) Train NN

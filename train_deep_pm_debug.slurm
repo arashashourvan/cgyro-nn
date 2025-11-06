@@ -18,7 +18,7 @@ module list
 
 cd /pscratch/sd/a/arash/cgyro-nn/code/3DCNN
 
-export OMP_NUM_THREADS=16
+export OMP_NUM_THREADS=64
 export CUDA_VISIBLE_DEVICES=0
 export PYTHONUNBUFFERED=1
 # (optional, can help with fragmentation)
@@ -26,11 +26,12 @@ export PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True
 
 srun -n 1 python train_with_earlystop_rmse_deep.py \
     --data ./mnt/data/myrun_phi_flux.npz \
-    --Tc 64 --horizons 1 5 10 \
-    --epochs 20 \
-    --batch 8 --lr 3e-4 \
-    --weight_decay 5e-4 --dropout 0.2 \
+    --Tc 16 --horizons 1 5 10 \
+    --epochs 30 \
+    --batch 16 --lr 1e-4 \
+    --weight_decay 1e-3 --dropout 0.2 \
     --device cuda \
-    --log_dir ./mnt/data/myrun_logs_deep_debug \
-    --early_stop 15 \
-    --phys_units 1
+    --log_dir ./mnt/data/myrun_logs_ot3 \
+    --early_stop 10 \
+    --phys_units 1\
+    --time_split 1

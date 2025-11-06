@@ -140,6 +140,7 @@ def main():
     ap.add_argument('--Nr', type=int, required=True)
     ap.add_argument('--Ntheta', type=int, required=True)
     ap.add_argument('--Ntor', type=int, required=True)
+    ap.add_argument('--t_init', type=int, default=0)
     ap.add_argument('--force_raw', type=int, default=0, help='1 to force RAW contiguous mode')
     ap.add_argument('--force_fortran', type=int, default=0, help='1 to force Fortran-record mode')
     ap.add_argument('--rec_bytes', type=int, default=0, help='Record-marker bytes (4 or 8); 0=auto')
@@ -158,7 +159,7 @@ def main():
     Nr, Nt, Nn = args.Nr, args.Ntheta, args.Ntor
     payload_elems = Nr*Nt*Nn*2
     payload_bytes = payload_elems * 4
-
+    t_in=args.t_init
     # Decide mode
     mode = None
     T = 0
@@ -272,6 +273,7 @@ def main():
             flux = flux[:Tm]
 
     if flux is None:
+        phi=phi[t_in:]
         np.savez_compressed(args.out, phi=phi)
         print(f"Wrote {args.out} with phi shape {phi.shape}")
     else:

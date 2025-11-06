@@ -52,6 +52,13 @@ ap.add_argument("--weight_decay", type=float, default=1e-4)
 ap.add_argument("--dropout", type=float, default=0.0)
 ap.add_argument("--phys_units", type=int, default=0, help="1=report extra RMSE in physical units if stats available")
 ap.add_argument("--nn_path", default="./mnt/data/bin.cgyro.nn",help="Save/load unified trained NN (weights + cfg + y scalers)")
+ap.add_argument(
+    "--time_split",
+    type=int,
+    default=0,
+    help="0 = random split over windows (current behavior), "
+         "1 = contiguous in time (train early, val middle, test late)."
+)
 
 args = ap.parse_args()
 
@@ -78,7 +85,8 @@ train_ds, val_ds, test_ds = build_datasets(
     Tc=args.Tc,
     horizons=args.horizons,
     split=(0.6, 0.2, 0.2),
-    seed=0
+    seed=0,
+    time_split=bool(args.time_split),
 )
 
 # ------------------------
@@ -198,8 +206,12 @@ for epoch in range(1, args.epochs + 1):
     #v_steps = math.ceil(len(val_ds)/args.batch)
     with torch.no_grad():
         for vstep, (xb, yb) in enumerate(DataLoader(val_ds, batch_size=args.batch, shuffle=False)):
-            xb = torch.tensor(xb, dtype=torch.float32, device=device)
-            yb = torch.tensor(yb, dtype=torch.float32, device=device)
+            #xb = torch.tensor(xb, dtype=torch.float32, device=device)
+            #yb = torch.tensor(yb, dtype=torch.float32, device=device)
+            
+            xb = xb.to(dtype=torch.float32, device=device, non_blocking=True)
+            yb = yb.to(dtype=torch.float32, device=device, non_blocking=True)
+             
             pred = model(xb)
             vloss = criterion(pred, yb)  
             val_loss += criterion(pred, yb).item() * len(xb)

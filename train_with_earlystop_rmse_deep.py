@@ -5,7 +5,7 @@ sys.path.append(os.path.dirname(__file__))
 
 from phi2flux_deep import Phi2FluxDeep as Phi2Flux  # model alias the trainer expects
 
-def build_datasets(data_path, Tc, horizons, split=(0.6, 0.2, 0.2), seed=0):
+def build_datasets(data_path, Tc, horizons, split=(0.6, 0.2, 0.2), seed=0, time_split: bool  = False):
     """
     Loads merged NPZ with:
       - phi:  [T, Nr, Ntheta, Ntor, 2]
@@ -35,9 +35,6 @@ def build_datasets(data_path, Tc, horizons, split=(0.6, 0.2, 0.2), seed=0):
             f"Pick smaller Tc / horizons, or use a longer time series."
         )
 
-    rng = np.random.default_rng(seed)
-    rng.shuffle(starts)
-
     # ---- create 60/20/20 with non-empty guard ----
     n = len(starts)
     n_tr = max(1, int(split[0]*n))
@@ -46,9 +43,21 @@ def build_datasets(data_path, Tc, horizons, split=(0.6, 0.2, 0.2), seed=0):
         n_tr = max(1, n-2)
         n_val = 1
     n_te = max(1, n - n_tr - n_val)
-    idx_tr = starts[:n_tr]
-    idx_val = starts[n_tr:n_tr+n_val]
-    idx_te  = starts[n_tr+n_val:n_tr+n_val+n_te]
+
+    if time_split:
+        # ---- contiguous in time: [early | middle | late] ----
+        idx_tr = starts[:n_tr]
+        idx_val = starts[n_tr:n_tr+n_val]
+        idx_te  = starts[n_tr+n_val:n_tr+n_val+n_te]
+    else:
+                # ---- random split over time windows (old behavior) ----
+        rng = np.random.default_rng(seed)
+        rng.shuffle(starts)
+        idx_tr = starts[:n_tr]
+        idx_val = starts[n_tr:n_tr+n_val]
+        idx_te  = starts[n_tr+n_val:n_tr+n_val+n_te]
+
+
 
     def make_set(idxs):
         X, Y = [], []
