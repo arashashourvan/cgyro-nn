@@ -39,7 +39,7 @@ NT            ?= 16         # ky/binormal points in ky_flux (try 16; if 15, over
 N_TIME        ?= 0
 DKY           ?= 0.067
 K0            ?= 0.0
-T_INIT        ?=200   #trim transient initial time 
+T_INIT        ?=250   #trim transient initial time 
 
 # ---------- Binary formats ----------
 FORCE_RAW     ?= 0          # φ file: raw=0, Fortran-unformatted=1

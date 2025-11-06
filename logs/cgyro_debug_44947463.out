@@ -1,0 +1,261 @@
+[build_datasets] windows: total=731  train=438  val=146  test=147
+
+[train] dataset:
+  y_mean: [[[138.08742 209.72182  82.0189 ]]]
+  y_std : [[[63.88084 80.70241 38.94373]]]
+  sample Y: min=-1.342e+00, max=1.826e+00, mean=-3.568e-01, std=7.402e-01
+
+[val] dataset:
+  y_mean: [[[138.08742 209.72182  82.0189 ]]]
+  y_std : [[[63.88084 80.70241 38.94373]]]
+  sample Y: min=-2.091e+00, max=3.292e+00, mean=-4.748e-03, std=1.575e+00
+
+[test] dataset:
+  y_mean: [[[138.08742 209.72182  82.0189 ]]]
+  y_std : [[[63.88084 80.70241 38.94373]]]
+  sample Y: min=-1.970e+00, max=3.647e+00, mean=1.617e-01, std=1.640e+00
+✅ Saved flux histograms in ./mnt/data/myrun_logs_ot7
+🟦 Starting epoch 1/30 (train steps ≈ 28)
+[718539] Φ2FluxDeep forward: input (16, 16, 2, 324, 1, 16)
+  ... step 0/28  loss=1.2641  (2.7s since last print)
+  ... step 10/28  loss=1.1765  (5.2s since last print)
+  ... step 20/28  loss=1.0036  (5.1s since last print)
+✅ epoch 1 forward/backward done in 17.3s
+  🔎 val step 0: batch (16, 16, 2, 324, 1, 16) loss=2.0903
+[01] train=1.0626  val=2.4871  RMSE(std)=[Qi:1.556, Qe:1.622, Γ:1.553]  RMSE(phys)=[Qi:99.377, Qe:130.864, Γ:60.480]  (4.4s)
+✅ Saved unified NN → ./mnt/data/myrun_logs_ot7/bin.cgyro.nn
+🟦 Starting epoch 2/30 (train steps ≈ 28)
+  ... step 0/28  loss=1.4547  (0.1s since last print)
+  ... step 10/28  loss=0.9924  (5.1s since last print)
+  ... step 20/28  loss=1.2443  (5.1s since last print)
+✅ epoch 2 forward/backward done in 15.1s
+  🔎 val step 0: batch (16, 16, 2, 324, 1, 16) loss=1.8011
+[02] train=1.0126  val=2.4996  RMSE(std)=[Qi:1.559, Qe:1.623, Γ:1.561]  RMSE(phys)=[Qi:99.594, Qe:130.952, Γ:60.772]  (4.4s)
+✅ Saved unified NN → ./mnt/data/myrun_logs_ot7/bin.cgyro.nn
+🟦 Starting epoch 3/30 (train steps ≈ 28)
+  ... step 0/28  loss=1.1688  (0.1s since last print)
+  ... step 10/28  loss=0.9056  (5.1s since last print)
+  ... step 20/28  loss=1.2503  (5.1s since last print)
+✅ epoch 3 forward/backward done in 15.1s
+  🔎 val step 0: batch (16, 16, 2, 324, 1, 16) loss=1.2345
+[03] train=0.9909  val=2.7020  RMSE(std)=[Qi:1.658, Qe:1.636, Γ:1.638]  RMSE(phys)=[Qi:105.887, Qe:132.023, Γ:63.779]  (4.4s)
+✅ Saved unified NN → ./mnt/data/myrun_logs_ot7/bin.cgyro.nn
+🟦 Starting epoch 4/30 (train steps ≈ 28)
+  ... step 0/28  loss=1.0969  (0.1s since last print)
+  ... step 10/28  loss=1.0904  (5.1s since last print)
+  ... step 20/28  loss=0.9164  (5.1s since last print)
+✅ epoch 4 forward/backward done in 15.0s
+  🔎 val step 0: batch (16, 16, 2, 324, 1, 16) loss=1.1664
+[04] train=0.9542  val=2.3204  RMSE(std)=[Qi:1.487, Qe:1.579, Γ:1.502]  RMSE(phys)=[Qi:94.991, Qe:127.458, Γ:58.487]  (4.4s)
+✅ Saved unified NN → ./mnt/data/myrun_logs_ot7/bin.cgyro.nn
+🟦 Starting epoch 5/30 (train steps ≈ 28)
+  ... step 0/28  loss=0.8072  (0.1s since last print)
+  ... step 10/28  loss=1.2144  (5.1s since last print)
+  ... step 20/28  loss=0.8203  (5.1s since last print)
+✅ epoch 5 forward/backward done in 15.0s
+  🔎 val step 0: batch (16, 16, 2, 324, 1, 16) loss=0.9365
+[05] train=0.9173  val=2.2384  RMSE(std)=[Qi:1.451, Qe:1.551, Γ:1.485]  RMSE(phys)=[Qi:92.690, Qe:125.164, Γ:57.820]  (4.4s)
+✅ Saved unified NN → ./mnt/data/myrun_logs_ot7/bin.cgyro.nn
+🟦 Starting epoch 6/30 (train steps ≈ 28)
+  ... step 0/28  loss=1.2059  (0.1s since last print)
+  ... step 10/28  loss=0.5365  (5.1s since last print)
+  ... step 20/28  loss=0.9829  (5.1s since last print)
+✅ epoch 6 forward/backward done in 15.0s
+  🔎 val step 0: batch (16, 16, 2, 324, 1, 16) loss=3.8111
+[06] train=0.8617  val=2.8380  RMSE(std)=[Qi:1.656, Qe:1.691, Γ:1.706]  RMSE(phys)=[Qi:105.767, Qe:136.491, Γ:66.457]  (4.4s)
+✅ Saved unified NN → ./mnt/data/myrun_logs_ot7/bin.cgyro.nn
+🟦 Starting epoch 7/30 (train steps ≈ 28)
+  ... step 0/28  loss=0.6949  (0.1s since last print)
+  ... step 10/28  loss=0.7215  (5.1s since last print)
+  ... step 20/28  loss=0.6800  (5.1s since last print)
+✅ epoch 7 forward/backward done in 15.0s
+  🔎 val step 0: batch (16, 16, 2, 324, 1, 16) loss=6.4730
+[07] train=0.7827  val=3.9824  RMSE(std)=[Qi:1.899, Qe:2.000, Γ:2.084]  RMSE(phys)=[Qi:121.290, Qe:161.376, Γ:81.163]  (4.4s)
+✅ Saved unified NN → ./mnt/data/myrun_logs_ot7/bin.cgyro.nn
+🟦 Starting epoch 8/30 (train steps ≈ 28)
+  ... step 0/28  loss=0.7627  (0.1s since last print)
+  ... step 10/28  loss=0.6338  (5.1s since last print)
+  ... step 20/28  loss=0.8137  (5.1s since last print)
+✅ epoch 8 forward/backward done in 15.0s
+  🔎 val step 0: batch (16, 16, 2, 324, 1, 16) loss=11.5802
+[08] train=0.7364  val=6.9323  RMSE(std)=[Qi:2.520, Qe:2.694, Γ:2.681]  RMSE(phys)=[Qi:160.949, Qe:217.430, Γ:104.426]  (4.4s)
+✅ Saved unified NN → ./mnt/data/myrun_logs_ot7/bin.cgyro.nn
+🟦 Starting epoch 9/30 (train steps ≈ 28)
+  ... step 0/28  loss=0.6168  (0.1s since last print)
+  ... step 10/28  loss=0.5141  (5.1s since last print)
+  ... step 20/28  loss=0.6657  (5.1s since last print)
+✅ epoch 9 forward/backward done in 15.0s
+  🔎 val step 0: batch (16, 16, 2, 324, 1, 16) loss=10.2218
+[09] train=0.6954  val=6.0495  RMSE(std)=[Qi:2.398, Qe:2.504, Γ:2.475]  RMSE(phys)=[Qi:153.169, Qe:202.102, Γ:96.402]  (4.4s)
+✅ Saved unified NN → ./mnt/data/myrun_logs_ot7/bin.cgyro.nn
+🟦 Starting epoch 10/30 (train steps ≈ 28)
+  ... step 0/28  loss=0.6796  (0.1s since last print)
+  ... step 10/28  loss=0.6861  (5.1s since last print)
+  ... step 20/28  loss=0.3699  (5.1s since last print)
+✅ epoch 10 forward/backward done in 15.0s
+  🔎 val step 0: batch (16, 16, 2, 324, 1, 16) loss=13.0886
+[10] train=0.6580  val=7.9238  RMSE(std)=[Qi:2.767, Qe:2.845, Γ:2.833]  RMSE(phys)=[Qi:176.755, Qe:229.561, Γ:110.314]  (4.4s)
+✅ Saved unified NN → ./mnt/data/myrun_logs_ot7/bin.cgyro.nn
+🟦 Starting epoch 11/30 (train steps ≈ 28)
+  ... step 0/28  loss=0.5824  (0.1s since last print)
+  ... step 10/28  loss=0.4053  (5.1s since last print)
+  ... step 20/28  loss=0.8061  (5.1s since last print)
+✅ epoch 11 forward/backward done in 15.0s
+  🔎 val step 0: batch (16, 16, 2, 324, 1, 16) loss=1.3042
+[11] train=0.6490  val=1.9189  RMSE(std)=[Qi:1.361, Qe:1.434, Γ:1.359]  RMSE(phys)=[Qi:86.962, Qe:115.707, Γ:52.939]  (4.4s)
+✅ Saved unified NN → ./mnt/data/myrun_logs_ot7/bin.cgyro.nn
+🟦 Starting epoch 12/30 (train steps ≈ 28)
+  ... step 0/28  loss=0.7768  (0.1s since last print)
+  ... step 10/28  loss=0.6147  (5.1s since last print)
+  ... step 20/28  loss=0.5835  (5.1s since last print)
+✅ epoch 12 forward/backward done in 15.0s
+  🔎 val step 0: batch (16, 16, 2, 324, 1, 16) loss=0.4589
+[12] train=0.6303  val=1.3867  RMSE(std)=[Qi:1.164, Qe:1.223, Γ:1.144]  RMSE(phys)=[Qi:74.365, Qe:98.716, Γ:44.551]  (4.4s)
+✅ Saved unified NN → ./mnt/data/myrun_logs_ot7/bin.cgyro.nn
+🟦 Starting epoch 13/30 (train steps ≈ 28)
+  ... step 0/28  loss=0.7595  (0.1s since last print)
+  ... step 10/28  loss=0.7200  (5.1s since last print)
+  ... step 20/28  loss=0.7222  (5.1s since last print)
+✅ epoch 13 forward/backward done in 15.0s
+  🔎 val step 0: batch (16, 16, 2, 324, 1, 16) loss=0.5839
+[13] train=0.6289  val=1.3896  RMSE(std)=[Qi:1.157, Qe:1.231, Γ:1.147]  RMSE(phys)=[Qi:73.932, Qe:99.308, Γ:44.660]  (4.4s)
+✅ Saved unified NN → ./mnt/data/myrun_logs_ot7/bin.cgyro.nn
+🟦 Starting epoch 14/30 (train steps ≈ 28)
+  ... step 0/28  loss=0.4346  (0.1s since last print)
+  ... step 10/28  loss=0.5946  (5.1s since last print)
+  ... step 20/28  loss=0.6256  (5.1s since last print)
+✅ epoch 14 forward/backward done in 15.0s
+  🔎 val step 0: batch (16, 16, 2, 324, 1, 16) loss=0.7602
+[14] train=0.5893  val=1.5341  RMSE(std)=[Qi:1.220, Qe:1.293, Γ:1.201]  RMSE(phys)=[Qi:77.936, Qe:104.362, Γ:46.758]  (4.4s)
+✅ Saved unified NN → ./mnt/data/myrun_logs_ot7/bin.cgyro.nn
+🟦 Starting epoch 15/30 (train steps ≈ 28)
+  ... step 0/28  loss=0.4790  (0.1s since last print)
+  ... step 10/28  loss=0.4544  (5.1s since last print)
+  ... step 20/28  loss=0.7527  (5.1s since last print)
+✅ epoch 15 forward/backward done in 15.0s
+  🔎 val step 0: batch (16, 16, 2, 324, 1, 16) loss=0.7257
+[15] train=0.6245  val=1.4856  RMSE(std)=[Qi:1.199, Qe:1.278, Γ:1.177]  RMSE(phys)=[Qi:76.590, Qe:103.159, Γ:45.839]  (4.4s)
+✅ Saved unified NN → ./mnt/data/myrun_logs_ot7/bin.cgyro.nn
+🟦 Starting epoch 16/30 (train steps ≈ 28)
+  ... step 0/28  loss=0.4715  (0.1s since last print)
+  ... step 10/28  loss=0.7050  (5.1s since last print)
+  ... step 20/28  loss=0.8279  (5.1s since last print)
+✅ epoch 16 forward/backward done in 15.0s
+  🔎 val step 0: batch (16, 16, 2, 324, 1, 16) loss=0.8173
+[16] train=0.5809  val=1.5512  RMSE(std)=[Qi:1.226, Qe:1.307, Γ:1.202]  RMSE(phys)=[Qi:78.290, Qe:105.453, Γ:46.802]  (4.4s)
+✅ Saved unified NN → ./mnt/data/myrun_logs_ot7/bin.cgyro.nn
+🟦 Starting epoch 17/30 (train steps ≈ 28)
+  ... step 0/28  loss=0.5478  (0.1s since last print)
+  ... step 10/28  loss=0.4366  (5.1s since last print)
+  ... step 20/28  loss=0.3944  (5.1s since last print)
+✅ epoch 17 forward/backward done in 15.0s
+  🔎 val step 0: batch (16, 16, 2, 324, 1, 16) loss=0.4832
+[17] train=0.5441  val=1.4244  RMSE(std)=[Qi:1.170, Qe:1.245, Γ:1.164]  RMSE(phys)=[Qi:74.752, Qe:100.465, Γ:45.320]  (4.4s)
+✅ Saved unified NN → ./mnt/data/myrun_logs_ot7/bin.cgyro.nn
+🟦 Starting epoch 18/30 (train steps ≈ 28)
+  ... step 0/28  loss=0.6302  (0.1s since last print)
+  ... step 10/28  loss=0.5437  (5.1s since last print)
+  ... step 20/28  loss=0.3911  (5.1s since last print)
+✅ epoch 18 forward/backward done in 15.0s
+  🔎 val step 0: batch (16, 16, 2, 324, 1, 16) loss=0.5364
+[18] train=0.5500  val=1.3965  RMSE(std)=[Qi:1.163, Qe:1.229, Γ:1.152]  RMSE(phys)=[Qi:74.285, Qe:99.173, Γ:44.862]  (4.4s)
+✅ Saved unified NN → ./mnt/data/myrun_logs_ot7/bin.cgyro.nn
+🟦 Starting epoch 19/30 (train steps ≈ 28)
+  ... step 0/28  loss=0.5872  (0.1s since last print)
+  ... step 10/28  loss=0.4074  (5.1s since last print)
+  ... step 20/28  loss=0.5748  (5.1s since last print)
+✅ epoch 19 forward/backward done in 15.0s
+  🔎 val step 0: batch (16, 16, 2, 324, 1, 16) loss=0.5305
+[19] train=0.5112  val=1.4266  RMSE(std)=[Qi:1.175, Qe:1.250, Γ:1.156]  RMSE(phys)=[Qi:75.070, Qe:100.872, Γ:45.021]  (4.4s)
+✅ Saved unified NN → ./mnt/data/myrun_logs_ot7/bin.cgyro.nn
+🟦 Starting epoch 20/30 (train steps ≈ 28)
+  ... step 0/28  loss=0.7322  (0.1s since last print)
+  ... step 10/28  loss=0.3686  (5.1s since last print)
+  ... step 20/28  loss=0.5851  (5.1s since last print)
+✅ epoch 20 forward/backward done in 15.0s
+  🔎 val step 0: batch (16, 16, 2, 324, 1, 16) loss=0.4826
+[20] train=0.5301  val=1.3927  RMSE(std)=[Qi:1.158, Qe:1.228, Γ:1.153]  RMSE(phys)=[Qi:73.983, Qe:99.102, Γ:44.891]  (4.4s)
+✅ Saved unified NN → ./mnt/data/myrun_logs_ot7/bin.cgyro.nn
+🟦 Starting epoch 21/30 (train steps ≈ 28)
+  ... step 0/28  loss=0.5171  (0.1s since last print)
+  ... step 10/28  loss=0.3415  (5.1s since last print)
+  ... step 20/28  loss=0.6869  (5.1s since last print)
+✅ epoch 21 forward/backward done in 15.0s
+  🔎 val step 0: batch (16, 16, 2, 324, 1, 16) loss=0.4328
+[21] train=0.5292  val=1.4747  RMSE(std)=[Qi:1.192, Qe:1.261, Γ:1.189]  RMSE(phys)=[Qi:76.125, Qe:101.789, Γ:46.295]  (4.4s)
+✅ Saved unified NN → ./mnt/data/myrun_logs_ot7/bin.cgyro.nn
+🟦 Starting epoch 22/30 (train steps ≈ 28)
+  ... step 0/28  loss=0.6157  (0.1s since last print)
+  ... step 10/28  loss=0.3897  (5.1s since last print)
+  ... step 20/28  loss=0.3971  (5.1s since last print)
+✅ epoch 22 forward/backward done in 15.0s
+  🔎 val step 0: batch (16, 16, 2, 324, 1, 16) loss=0.4456
+[22] train=0.4755  val=1.5602  RMSE(std)=[Qi:1.222, Qe:1.304, Γ:1.219]  RMSE(phys)=[Qi:78.033, Qe:105.262, Γ:47.490]  (4.4s)
+✅ Saved unified NN → ./mnt/data/myrun_logs_ot7/bin.cgyro.nn
+🟦 Starting epoch 23/30 (train steps ≈ 28)
+  ... step 0/28  loss=0.3260  (0.1s since last print)
+  ... step 10/28  loss=0.4722  (5.1s since last print)
+  ... step 20/28  loss=0.4757  (5.1s since last print)
+✅ epoch 23 forward/backward done in 15.0s
+  🔎 val step 0: batch (16, 16, 2, 324, 1, 16) loss=0.4154
+[23] train=0.4613  val=1.6731  RMSE(std)=[Qi:1.268, Qe:1.339, Γ:1.273]  RMSE(phys)=[Qi:81.000, Qe:108.041, Γ:49.557]  (4.4s)
+✅ Saved unified NN → ./mnt/data/myrun_logs_ot7/bin.cgyro.nn
+🟦 Starting epoch 24/30 (train steps ≈ 28)
+  ... step 0/28  loss=0.4479  (0.1s since last print)
+  ... step 10/28  loss=0.4203  (5.1s since last print)
+  ... step 20/28  loss=0.3881  (5.1s since last print)
+✅ epoch 24 forward/backward done in 15.0s
+  🔎 val step 0: batch (16, 16, 2, 324, 1, 16) loss=0.4186
+[24] train=0.4487  val=2.3071  RMSE(std)=[Qi:1.494, Qe:1.552, Γ:1.510]  RMSE(phys)=[Qi:95.454, Qe:125.243, Γ:58.805]  (4.4s)
+✅ Saved unified NN → ./mnt/data/myrun_logs_ot7/bin.cgyro.nn
+🟦 Starting epoch 25/30 (train steps ≈ 28)
+  ... step 0/28  loss=0.6320  (0.1s since last print)
+  ... step 10/28  loss=0.3946  (5.1s since last print)
+  ... step 20/28  loss=0.5710  (5.1s since last print)
+✅ epoch 25 forward/backward done in 15.0s
+  🔎 val step 0: batch (16, 16, 2, 324, 1, 16) loss=0.4013
+[25] train=0.4247  val=1.6135  RMSE(std)=[Qi:1.243, Qe:1.317, Γ:1.249]  RMSE(phys)=[Qi:79.396, Qe:106.297, Γ:48.657]  (4.4s)
+✅ Saved unified NN → ./mnt/data/myrun_logs_ot7/bin.cgyro.nn
+🟦 Starting epoch 26/30 (train steps ≈ 28)
+  ... step 0/28  loss=0.3107  (0.1s since last print)
+  ... step 10/28  loss=0.2650  (5.1s since last print)
+  ... step 20/28  loss=0.3364  (5.1s since last print)
+✅ epoch 26 forward/backward done in 15.0s
+  🔎 val step 0: batch (16, 16, 2, 324, 1, 16) loss=0.4155
+[26] train=0.3927  val=1.5186  RMSE(std)=[Qi:1.211, Qe:1.281, Γ:1.204]  RMSE(phys)=[Qi:77.337, Qe:103.340, Γ:46.903]  (4.4s)
+✅ Saved unified NN → ./mnt/data/myrun_logs_ot7/bin.cgyro.nn
+🟦 Starting epoch 27/30 (train steps ≈ 28)
+  ... step 0/28  loss=0.4414  (0.1s since last print)
+  ... step 10/28  loss=0.3340  (5.1s since last print)
+  ... step 20/28  loss=0.5206  (5.1s since last print)
+✅ epoch 27 forward/backward done in 15.1s
+  🔎 val step 0: batch (16, 16, 2, 324, 1, 16) loss=0.4171
+[27] train=0.3823  val=1.5251  RMSE(std)=[Qi:1.206, Qe:1.286, Γ:1.211]  RMSE(phys)=[Qi:77.049, Qe:103.792, Γ:47.162]  (4.4s)
+✅ Saved unified NN → ./mnt/data/myrun_logs_ot7/bin.cgyro.nn
+🟦 Starting epoch 28/30 (train steps ≈ 28)
+  ... step 0/28  loss=0.4405  (0.1s since last print)
+  ... step 10/28  loss=0.3895  (5.1s since last print)
+  ... step 20/28  loss=0.5750  (5.1s since last print)
+✅ epoch 28 forward/backward done in 15.0s
+  🔎 val step 0: batch (16, 16, 2, 324, 1, 16) loss=0.4134
+[28] train=0.3555  val=1.7293  RMSE(std)=[Qi:1.288, Qe:1.364, Γ:1.291]  RMSE(phys)=[Qi:82.267, Qe:110.113, Γ:50.294]  (4.4s)
+✅ Saved unified NN → ./mnt/data/myrun_logs_ot7/bin.cgyro.nn
+🟦 Starting epoch 29/30 (train steps ≈ 28)
+  ... step 0/28  loss=0.3574  (0.1s since last print)
+  ... step 10/28  loss=0.3963  (5.1s since last print)
+  ... step 20/28  loss=0.4664  (5.1s since last print)
+✅ epoch 29 forward/backward done in 15.0s
+  🔎 val step 0: batch (16, 16, 2, 324, 1, 16) loss=0.4525
+[29] train=0.3184  val=1.6191  RMSE(std)=[Qi:1.257, Qe:1.315, Γ:1.243]  RMSE(phys)=[Qi:80.323, Qe:106.152, Γ:48.426]  (4.4s)
+✅ Saved unified NN → ./mnt/data/myrun_logs_ot7/bin.cgyro.nn
+🟦 Starting epoch 30/30 (train steps ≈ 28)
+  ... step 0/28  loss=0.4600  (0.1s since last print)
+  ... step 10/28  loss=0.3369  (5.1s since last print)
+  ... step 20/28  loss=0.3342  (5.1s since last print)
+✅ epoch 30 forward/backward done in 15.0s
+  🔎 val step 0: batch (16, 16, 2, 324, 1, 16) loss=0.4243
+[30] train=0.3120  val=1.6201  RMSE(std)=[Qi:1.252, Qe:1.317, Γ:1.248]  RMSE(phys)=[Qi:80.001, Qe:106.309, Γ:48.588]  (4.4s)
+✅ Saved unified NN → ./mnt/data/myrun_logs_ot7/bin.cgyro.nn
+Saved metrics → ./mnt/data/myrun_logs_ot7/metrics.csv
+✅ Final unified NN → ./mnt/data/myrun_logs_ot7/bin.cgyro.nn
+✅ Training complete. Artifacts in: ./mnt/data/myrun_logs_ot7

@@ -1,0 +1,18 @@
+[build_datasets] windows: total=683  train=409  val=136  test=138
+
+[train] dataset:
+  y_mean: [[[136.38025 207.32764  80.92676]]]
+  y_std : [[[66.03982 84.01814 40.22341]]]
+  sample Y: min=-1.268e+00, max=2.458e+00, mean=-1.248e-01, std=8.795e-01
+
+[val] dataset:
+  y_mean: [[[136.38025 207.32764  80.92676]]]
+  y_std : [[[66.03982 84.01814 40.22341]]]
+  sample Y: min=-1.980e+00, max=3.190e+00, mean=1.775e-01, std=1.493e+00
+
+[test] dataset:
+  y_mean: [[[136.38025 207.32764  80.92676]]]
+  y_std : [[[66.03982 84.01814 40.22341]]]
+  sample Y: min=-1.864e+00, max=3.555e+00, mean=1.838e-01, std=1.632e+00
+✅ Saved flux histograms in ./mnt/data/myrun_logs_ot7
+🟦 Starting epoch 1/30 (train steps ≈ 26)

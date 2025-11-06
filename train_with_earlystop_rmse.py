@@ -179,7 +179,7 @@ for epoch in range(1, args.epochs + 1):
         loss.backward()
         optimizer.step()
 
-        if step % 2 == 0:  # heartbeat every ~10 steps
+        if step % 10 == 0:  # heartbeat every ~10 steps
             dt = time.time() - t0
             print(f"  ... step {step}/{n_steps}  loss={loss.item():.4f}  ({dt:.1f}s since last print)",
                   flush=True)
@@ -190,7 +190,7 @@ for epoch in range(1, args.epochs + 1):
                    param_norm = p.grad.data.norm(2).item()
                    total_norm += param_norm ** 2
             total_norm = total_norm ** 0.5
-            print(f"  ↘ grad L2 norm ≈ {total_norm:.3e} (batch {step})", flush=True)
+            # print(f"  ↘ grad L2 norm ≈ {total_norm:.3e} (batch {step})", flush=True)
 
         train_loss += loss.item() * len(xb)
         n_train += len(xb)
@@ -298,6 +298,7 @@ for epoch in range(1, args.epochs + 1):
     }
     import os, torch
     os.makedirs(os.path.dirname(args.nn_path), exist_ok=True)
+    args.nn_path = args.log_dir + '/bin.cgyro.nn'  # for each run put the trained nn in its own folder
     torch.save(payload, args.nn_path)
     print(f"✅ Saved unified NN → {args.nn_path}")
 
